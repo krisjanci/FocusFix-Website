@@ -7,7 +7,9 @@ This is the website for my FocusFix macOS app. I want it to be simple: the logo,
 For now it's just local and the download button is disabled. I removed the cat
 download from the button so it can't be confused with an installer. The asset is
 still in the repository. The recording/privacy page explains the local-only build
-I'm preparing; it still needs review and a real support contact before publishing.
+I'm preparing, including Input Monitoring, private sandbox storage and GitHub Issues
+for general support. It still needs review against the final release and the hosting
+provider's privacy information before publishing.
 
 ## How to run it
 
