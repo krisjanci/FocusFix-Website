@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How the local-only FocusFix build records and stores activity. Public download is not available yet.">
+  <meta name="description" content="How FocusFix handles recording, optional accounts and research sharing. Public download is not available yet.">
   <title>Recording &amp; privacy — FocusFix</title>
   <link rel="icon" href="assets/focusfix.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
@@ -12,24 +12,31 @@
   <main class="page privacy-page">
     <a href="index.html">← FocusFix</a>
     <h1>Recording &amp; privacy</h1>
-    <p>FocusFix is still in development. There is no public app download or study enrollment on this website. This page describes the local-only Release build being prepared, not a research consent form.</p>
+    <p>FocusFix is still in development. There is no public app download or study enrollment on this website. This draft describes local recording, optional accounts and the gated research features being prepared. It is not a research consent form or a published study invitation.</p>
     <h2>What a session records</h2>
     <p>While you choose to record, FocusFix observes activity across apps: keyboard timing and delete-key events, clicks, scrolling, app-switch events, one-second mouse movement summaries, break timing and any optional fatigue/productivity ratings.</p>
     <p>It does not save typed text, individual letter keys, application names, window titles, screenshots or cursor paths. Custom break-activity labels are saved if you enter them. Detailed timing can still be sensitive; this data should not be treated as anonymous.</p>
     <h2>Your controls</h2>
-    <p>A recording notice appears before first use. Input Monitoring permission lets FocusFix passively observe input across apps. Choose Enable Input Monitoring in FocusFix to request access and open the right Settings page. Turn on FocusFix there, then quit and reopen it if macOS asks. FocusFix cannot grant itself permission. Start a session explicitly, stop it from the window or menu bar, or quit the app. Revoke permission in macOS System Settings whenever you want.</p>
-    <p>You can turn surveys off in the profile for future sessions. Detailed activity logging pauses during a planned break and resumes at timer expiry or an earlier return.</p>
+    <p>On first launch, choose Enable recording or Not now. Consent does not grant OS permission or start a session. Disable recording in Settings → Privacy &amp; Research to stop the current session and prevent new recording until re-enabled. Input Monitoring permission lets FocusFix passively observe input across apps. Choose Enable Input Monitoring in FocusFix to request access and open the right Settings page. Turn on FocusFix there, then quit and reopen it if macOS asks. FocusFix cannot grant itself permission. Start a session explicitly, stop it from the window or menu bar, or quit the app. Revoke permission in macOS System Settings whenever you want.</p>
+    <p>You can turn surveys off in Settings → Privacy &amp; Research for future sessions. Detailed activity logging pauses during a planned break and resumes at timer expiry or an earlier return.</p>
     <h2>Where the files stay</h2>
-    <p>The local-only Release build has no research upload endpoint or enrollment. Recordings stay in the app’s private sandbox on your Mac until you delete them. Open Sessions and use Show in Finder to locate a recording, or export a copy to a folder you choose. FocusFix does not separately encrypt these files. Your backups and any exports you create may contain copies.</p>
+    <p>Unless you are approved and separately opt into research sharing, recordings stay in the app’s private sandbox on your Mac until you delete them. Open Sessions and use Show in Finder to locate a recording, or export a copy to a folder you choose. FocusFix does not separately encrypt these files. Your backups and any exports you create may contain copies.</p>
     <p>Deleting a session moves its local folder to Trash. Empty Trash to remove that copy; exports and backups are separate. The app does not remove those for you.</p>
-    <h2>Research is a separate step</h2>
-    <p>The development build has a private, enrollment-only upload test. It is not the public download. A research-enabled release needs a reviewed study/consent process, participant contact details and a retention/deletion plan before recruitment starts.</p>
+    <h2>Optional accounts</h2>
+    <p>Guests can use local features. Creating an account sends your email and authentication information to the configured Supabase service. Saving an account profile sends the name and photo you choose; local profiles remain on the Mac. Account identifiers, tokens and service logs support authentication and security. Signing in never opts you into research.</p>
+    <h2>Optional research sharing</h2>
+    <p>Research recruitment and collection are currently disabled. When an approved study opens, eligible adults can request to join. A researcher manually verifies and approves up to 50 total participants. Approved participants must review the current study consent and explicitly enable sharing before new completed recordings upload to private Supabase storage. Names and photos are excluded from recording archives, but the service can associate recordings with your account. Detailed behavioral data is not described as anonymous.</p>
+    <p>The study information must identify eligibility, purposes, duration, researcher contact, risks, retention and withdrawal/deletion terms, including whether future model training and product improvement are permitted. These terms have not been invented or approved by the app.</p>
+    <p>Turn sharing off in Settings → Privacy &amp; Research to cancel pending local deliveries and revoke consent on the server. Offline withdrawals wait for connectivity and the matching sign-in, and block subsequent uploads from that installation. Other devices cannot learn about an offline withdrawal until synchronization. Data already received is handled under the study policy.</p>
+    <h2>Research deletion and retention</h2>
+    <p>Request research-data deletion in Settings → Privacy &amp; Research. The service stops uploads and deletes hosted recordings, and leaves a private request for the researcher to review downloaded copies, backups and training datasets. Account deletion also initiates this process. Local recordings remain separate. Minimal request and consent records may remain under the approved policy; they are not automatically anonymous. Removing recordings does not automatically remove their influence from trained models.</p>
+    <p>The institution-approved retention period, responsible researcher and private contact details must be added before recruitment and publication. No indefinite retention or arbitrary deletion period is promised by this draft.</p>
     <h2>Limitations</h2>
     <p>FocusFix is an experimental activity tool, not a medical device or a validated fatigue or productivity detector. No analytics scripts, cookies or forms are included in this static website. A future hosting provider may process normal web request logs; its details must be added before publication.</p>
     <h2>Support and source</h2>
-    <p>For general help, use <a href="https://github.com/krisjanci/FocusFix-MacOS-App/issues">FocusFix support on GitHub</a>. Issues are public: do not post recordings, enrollment credentials or personal information. A GitHub account is needed to open an issue.</p>
+    <p>For general help, use <a href="https://github.com/krisjanci/FocusFix-MacOS-App/issues">FocusFix support on GitHub</a>. Issues are public: do not post recordings, credentials or personal information. A GitHub account is needed to open an issue.</p>
     <p>The app source is available under GPL-3.0-only in the <a href="https://github.com/krisjanci/FocusFix-MacOS-App">FocusFix app repository</a>. A future website download will include access to its matching source and license.</p>
-    <p>Preparation date: October 21, 2026. This information still needs release review.</p>
+    <p>Preparation date: October 26, 2026. This information still needs release review.</p>
   </main>
 </body>
 </html>
