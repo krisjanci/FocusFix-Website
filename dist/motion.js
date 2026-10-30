@@ -12,6 +12,7 @@
   const work = demo.querySelector('[data-work-time]');
   const breaks = demo.querySelector('[data-break-count]');
   const caption = document.querySelector('[data-caption]');
+  const notice = demo.querySelector('.break-notice');
   const phases = [
     { name: 'focus', duration: 6000, label: 'Working', detail: 'Session time', caption: 'Track time while you work.', start: 1496, end: 1500, progress: [74, 100], position: [8, 46] },
     { name: 'break', duration: 6000, label: 'On a break', detail: 'Break remaining', caption: 'Take a timed break. Work tracking pauses.', start: 120, end: 0, progress: [100, 0], position: [49, 68] },
@@ -32,6 +33,7 @@
     const phase = phases[phaseIndex];
     const fraction = Math.min(elapsed / phase.duration, 1);
     demo.dataset.phase = phase.name;
+    notice.setAttribute('aria-hidden', String(phase.name !== 'break'));
     demo.style.setProperty('--progress', phase.progress[0] + (phase.progress[1] - phase.progress[0]) * fraction);
     demo.style.setProperty('--position', `${phase.position[0] + (phase.position[1] - phase.position[0]) * fraction}%`);
     label.textContent = phase.label;
