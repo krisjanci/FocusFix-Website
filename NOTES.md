@@ -27,3 +27,13 @@
 - Browser checks passed at 375px and 1280px widths, with no horizontal overflow. Checked the tutorial and guide at phone width, the privacy-page link and layout, the disabled download and the motion toggle. A browser connection timeout interrupted one check; a fresh preview completed the desktop check.
 - JavaScript syntax, motion-control initialization/toggling and reduced-motion behavior, local link/asset existence and whitespace checks passed. No dependencies or build step were added.
 - Saved each implementation file in its own commit, followed by this separate notes commit. The website remains a local draft; nothing was pushed or published.
+
+## Product messaging and session motion — October 30, 2026
+
+- Removed the extra lifestyle slogans, decorative orbit, tutorial waves and ornamental guide motion. Retained “Make time for a break” as the single headline, with a factual description of work sessions, break reminders and daily progress.
+- Switched to consistent system typography, a neutral background and restrained teal accents. Tutorial and guide placeholders are now compact resources rather than separate promotional messages.
+- Added an illustrative Focus → Break → Return session animation. Work time advances, holds at 25:00 during a break countdown, then resumes with one completed break. The timeline, reminder, pause symbol and softened work context explain the transition. Example timings are clearly labeled as condensed, not a product recording or fatigue prediction.
+- Stage buttons hold a selected stage for inspection; Play resumes it. Playback pauses offscreen and in hidden tabs. Reduced Motion starts with a static view and still permits manual stage selection. Without JavaScript, the initial example and explanatory fallback remain readable.
+- Browser verification covered 320px, 375px and 1280px widths with no horizontal overflow, the break and return states, keyboard stage activation and the disabled download. No browser warnings or errors were reported. Saved a full-page preview outside the repository.
+- Deterministic motion checks passed for a full cycle, held work time during breaks, resumed progress, manual stages, pause/resume, visibility suspension, Reduced Motion and IntersectionObserver fallback. JavaScript syntax, local asset/link and whitespace checks passed.
+- Committed every changed file separately for the main iteration and again for the visual/accessibility corrections. This notes update has its own commit. Nothing was pushed or published.
