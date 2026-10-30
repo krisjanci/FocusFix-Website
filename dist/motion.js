@@ -37,6 +37,9 @@
     const r = 132 + u * 48;
     return [r * Math.cos(angle) + 15 * Math.sin(2 * angle), r * .82 * Math.sin(angle) + 10 * Math.cos(2 * angle)];
   }
+  const forms = [0, 1, 2].map((shape) => Array.from({ length: strands }, (_, strand) =>
+    Array.from({ length: points + 1 }, (_, i) => point(shape, strand, i / points))));
+
   // Hold each form long enough to read; use a soft transition between them.
   function scene(time) {
     const t = time % cycleLength;
@@ -68,8 +71,8 @@
       context.strokeStyle = `rgba(${Math.round(48 + u * 52)}, ${Math.round(84 + u * 25)}, ${Math.round(65 + u * 17)}, ${.32 + .22 * Math.sin(u * Math.PI)})`;
       context.beginPath();
       for (let i = 0; i <= points; i++) {
-        const a = point(from, strand, i / points);
-        const b = point(to, strand, i / points);
+        const a = forms[from][strand][i];
+        const b = forms[to][strand][i];
         const x = a[0] + (b[0] - a[0]) * blend;
         const y = a[1] + (b[1] - a[1]) * blend;
         if (i === 0) context.moveTo(x, y);
