@@ -23,7 +23,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--teal); outline-
 .motion-toggle { display: flex; align-items: center; gap: 7px; background: none; border: 0; padding: 9px 0; cursor: pointer; }
 .toggle-symbol { font-size: 13px; }
 .header-tools a:hover, .site-footer a:hover { color: var(--teal); text-decoration: underline; }
-.hero { position: relative; display: grid; grid-template-columns: .95fr 1.2fr; min-height: 690px; align-items: center; padding: 30px 0 75px; }
+.hero { overflow: clip; position: relative; display: grid; grid-template-columns: .95fr 1.2fr; min-height: 690px; align-items: center; padding: 30px 0 75px; }
 .hero-copy { z-index: 1; padding-bottom: 15px; }
 .eyebrow { font-size: 11px; color: #5d6d61; letter-spacing: 1.6px; text-transform: uppercase; margin: 0 0 25px; }
 h1 { font-size: clamp(66px, 6.8vw, 98px); line-height: 1.03; letter-spacing: -.065em; font-weight: 450; margin: 0; }
