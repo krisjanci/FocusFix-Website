@@ -5,8 +5,9 @@
   const context = canvas.getContext('2d');
   if (!context) return;
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  const label = document.querySelector('[data-art-label]');
-  const number = document.querySelector('[data-art-number]');
+  const sculpture = document.querySelector('.sculpture');
+  const phaseNames = ['focus', 'pause', 'continue'];
+  let activePhase = -1;
   const toggleLabel = toggle.querySelector('[data-toggle-label]');
   const toggleSymbol = toggle.querySelector('.toggle-symbol');
   const strands = 64;
@@ -55,8 +56,16 @@
     const [from, to, fraction] = scene(elapsed);
     const blend = fraction * fraction * (3 - 2 * fraction);
     const active = blend < .5 ? from : to;
-    label.textContent = ['Focus', 'Pause', 'Continue'][active];
-    number.textContent = `0${active + 1}`;
+    if (active !== activePhase) {
+      sculpture.dataset.phase = phaseNames[active];
+      activePhase = active;
+    }
+    // Caption emphasis changes at the same midpoint as the sculpture's form.
+    const time = elapsed % cycleLength;
+    const phaseTime = active === 0 ? (time >= 20750 ? time - 20750 : time + 1250)
+      : active === 1 ? time - 6250 : time - 14750;
+    const phaseDuration = [7500, 8500, 6000][active];
+    sculpture.style.setProperty('--caption-progress', Math.min(1, phaseTime / phaseDuration).toFixed(3));
     const openness = (from === 1 ? 1 - blend : 0) + (to === 1 ? blend : 0);
     document.documentElement.style.setProperty('--space', openness.toFixed(3));
     context.clearRect(0, 0, size, size);
@@ -107,6 +116,7 @@
     if (frame !== null) cancelAnimationFrame(frame);
     frame = null;
     lastTime = null;
+    document.documentElement.classList.toggle('motion-paused', paused);
     toggle.setAttribute('aria-pressed', String(paused));
     toggleLabel.textContent = paused ? 'Play motion' : 'Pause motion';
     toggleSymbol.textContent = paused ? '▷' : 'Ⅱ';
