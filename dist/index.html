@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FocusFix for macOS. Make time for a break. A local-first activity tool, currently in development.">
+  <meta name="description" content="FocusFix for macOS. Work sessions, break reminders, and daily progress in one app. Currently in development.">
   <meta name="color-scheme" content="light">
   <title>FocusFix — Make time for a break</title>
   <link rel="icon" href="assets/focusfix.png" type="image/png">
@@ -13,54 +13,48 @@
 <body>
   <div class="site-shell">
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="FocusFix home"><span class="brand-mark" aria-hidden="true"></span>FocusFix</a>
-      <div class="header-tools"><span class="platform">Made for macOS</span><button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button></div>
+      <a class="wordmark" href="index.html" aria-label="FocusFix home"><img src="assets/focusfix.png" width="28" height="28" alt="">FocusFix</a>
+      <div class="header-tools"><a href="privacy.html">Recording &amp; privacy</a><button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause animation</button></div>
     </header>
     <main class="page">
       <section class="hero" aria-labelledby="app-title">
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <span class="orbit-dot"></span><span class="art-tick tick-one"></span><span class="art-tick tick-two"></span>
-          <div class="icon-wrap"><img class="app-logo" src="assets/focusfix.png" width="100" height="100" alt=""></div>
-          <span class="art-caption">A little space goes a long way.</span>
-        </div>
-        <p class="eyebrow">FocusFix / A moment for yourself</p>
-        <h1 id="app-title">Make time<br>for a <em>break.</em></h1>
-        <p class="slogan">A little less screen. A little more breathing room.</p>
+        <p class="eyebrow">FocusFix for macOS</p>
+        <h1 id="app-title">Make time<br>for a <span>break.</span></h1>
+        <p class="slogan">Work sessions. Break reminders. Daily progress.<br>In one macOS app.</p>
         <!-- No app download until the exact release is signed, notarized and tested. -->
-        <button class="download" type="button" disabled aria-describedby="download-note">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Download coming soon
-        </button>
-        <p id="download-note"><span class="status-dot" aria-hidden="true"></span>In development · for macOS</p>
-        <a class="privacy-link" href="privacy.html">Recording &amp; privacy <span aria-hidden="true">↗</span></a>
-        <div class="hero-footnote" aria-hidden="true"><span>Find your rhythm</span><span class="fine-line"></span><span>Leave room for a pause</span></div>
+        <button class="download" type="button" disabled aria-describedby="download-note">Download coming soon <span aria-hidden="true">↓</span></button>
+        <p id="download-note">Currently in development.</p>
       </section>
 
-      <section class="tutorial reveal" aria-labelledby="tutorial-title">
-        <div class="section-heading">
-          <div><p class="eyebrow section-number">01 / The first steps</p><h2 id="tutorial-title">Getting started</h2></div>
-          <span>Video tutorial · coming soon</span>
+      <section class="experience" aria-label="How FocusFix fits into a work session">
+        <div class="session-demo" data-phase="focus">
+          <div class="demo-topbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>FocusFix</span><span class="demo-type">Session preview</span></div>
+          <div class="demo-stage">
+            <div class="session-context"><span class="context-label">Current session</span><div class="activity-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><p class="session-summary">Work time<span data-work-time>24:56</span></p><p class="session-summary">Breaks taken<span data-break-count>0</span></p></div>
+            <div class="timer-display">
+              <div class="timer-orbit" aria-hidden="true"><svg viewBox="0 0 260 260" fill="none"><circle class="ring-track" cx="130" cy="130" r="112"/><circle class="ring-progress" cx="130" cy="130" r="112" pathLength="100"/><g class="pause-symbol"><rect x="117" y="56" width="8" height="22" rx="3"/><rect x="135" y="56" width="8" height="22" rx="3"/></g></svg></div>
+              <span class="timer-label" data-phase-label>Working</span><span class="timer-value" data-timer>24:56</span><span class="timer-detail" data-detail>Session time</span>
+            </div>
+            <div class="break-notice"><img src="assets/focusfix.png" width="32" height="32" alt=""><div><strong>Time for a break</strong><span>A short pause in your session.</span></div></div>
+          </div>
+          <div class="session-timeline" aria-hidden="true"><span>Session</span><div class="timeline-track"><span class="timeline-work"></span><span class="timeline-break"></span><span class="timeline-return"></span><span class="timeline-cursor"></span></div><span class="timeline-end">Work + breaks</span></div>
         </div>
-        <!-- Replace this non-interactive placeholder with the tutorial video later. -->
-        <div class="video-placeholder">
-          <svg class="rhythm-art" viewBox="0 0 800 300" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M-30 150C90 150 80 50 200 50S310 250 430 250 550 100 660 100 760 150 830 150"/><path d="M-30 174C90 174 80 74 200 74S310 274 430 274 550 124 660 124 760 174 830 174"/><path d="M-30 126C90 126 80 26 200 26S310 226 430 226 550 76 660 76 760 126 830 126"/></svg>
-          <span class="video-label">A slower pace. A simple start.</span>
-          <span class="play-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m9 5 10 7-10 7V5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span>
-          <p>Tutorial video coming soon</p>
-          <span class="video-corner" aria-hidden="true">FOCUS / PAUSE / REPEAT</span>
+        <div class="demo-controls" hidden aria-label="Explore the session animation">
+          <button type="button" data-step="focus" aria-pressed="true"><span>01</span> Focus</button>
+          <button type="button" data-step="break" aria-pressed="false"><span>02</span> Break</button>
+          <button type="button" data-step="return" aria-pressed="false"><span>03</span> Return</button>
         </div>
+        <p class="demo-caption" data-caption>Track time while you work.</p>
+        <p class="demo-disclaimer">Illustrative session. Time condensed.</p>
+        <noscript><p class="demo-disclaimer">Track work time, take a timed break, then continue your session.</p></noscript>
       </section>
 
-      <section class="manual reveal" aria-labelledby="manual-title">
-        <div class="section-heading">
-          <div><p class="eyebrow section-number">02 / At your own pace</p><h2 id="manual-title">Written guide</h2></div>
-          <span>Coming later</span>
-        </div>
-        <div class="manual-space"><span class="guide-symbol" aria-hidden="true"><i></i><i></i><i></i></span><p>A little guidance, when you need it.<br><span>The written guide will live here.</span></p><span class="guide-arrow" aria-hidden="true">↗</span></div>
+      <section class="resources" aria-label="Getting started resources">
+        <div class="tutorial" aria-labelledby="tutorial-title"><p class="eyebrow">Setup</p><h2 id="tutorial-title">Getting started.</h2><p>Video tutorial coming soon.</p><span class="resource-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="m9 5 10 7-10 7V5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span></div>
+        <div class="manual" aria-labelledby="manual-title"><p class="eyebrow">Reference</p><h2 id="manual-title">Written guide.</h2><p>Documentation coming soon.</p><span class="resource-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 4h7c2 0 3 1 3 3v14c0-2-1-3-3-3H4V4Zm10 3c0-2 1-3 3-3h3v14h-3c-2 0-3 1-3 3" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span></div>
       </section>
     </main>
-    <footer class="site-footer reveal"><span>FocusFix</span><p>Make room for a moment away.</p><a href="privacy.html">Recording &amp; privacy <span aria-hidden="true">↗</span></a></footer>
+    <footer class="site-footer"><span>FocusFix for macOS</span><a href="privacy.html">Recording &amp; privacy <span aria-hidden="true">↗</span></a></footer>
   </div>
 </body>
 </html>
