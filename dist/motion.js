@@ -144,6 +144,6 @@
     new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
       updatePlayback();
-    }, { threshold: .05 }).observe(canvas);
+    }, { threshold: .05 }).observe(sculpture);
   }
 })();
