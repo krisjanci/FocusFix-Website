@@ -47,3 +47,13 @@
 - Browser checks covered 320px, 375px and 1280px widths. Fixed the observed desktop overflow and confirmed no horizontal overflow. Visually checked the sculpture, stable pause form, resources and footer. No browser warnings or errors were reported. Saved a full-page screenshot outside the repository.
 - Automated checks passed for finite drawing coordinates, all three forms and cycle return, pause/play, offscreen/hidden suspension, Reduced Motion, resize and missing-canvas fallback. Local links/assets, removal of app-demo elements, disabled download, JavaScript syntax and whitespace checks passed.
 - Every changed file was committed separately for the main iteration and every follow-up refinement. This notes update is a separate commit. Nothing was pushed or published.
+
+## Clearer synchronized art captions — October 30, 2026
+
+- Preserved the accepted symbolic sculpture and editorial art direction. Replaced the tiny numbered caption and duplicate bottom tagline with a prominent Focus / Pause / Continue sequence directly below the artwork.
+- The current word lifts and darkens in sync with the form change. Short descriptions crossfade beneath it: Stay with your work; Step away from the screen; Return to your work. A small advancing rule shows the pace of the current stage.
+- Kept all three words visible and legible so the visual sequence is understandable before a complete cycle. Caption changes update at the same transition midpoint as the sculpture, without repeated screen-reader announcements. The accessible description explains all three stages.
+- Refined artwork/caption spacing for the desktop and stacked layouts. Pausing freezes the artwork and disables text transitions; Reduced Motion uses the static Pause state. The no-script/no-canvas fallback also shows the Pause caption. Offscreen suspension now observes the complete figure, including its caption.
+- Browser checks passed at 320px, 375px and 1280px with no horizontal overflow. Confirmed 26px phone captions and 32px desktop captions, automatic phase changes, current-word opacity/position and pause state. No browser warnings or errors were reported. Saved a full-page preview outside the repository.
+- Automated checks passed for synchronized stage/progress updates, the full sculpture cycle, pause/play, visibility suspension, reduced-motion initialization, resize and canvas fallback. All local links/assets exist; syntax and whitespace checks passed.
+- Committed each changed file separately in the main iteration and each refinement, followed by this notes commit. Changes remain local and unpublished.
