@@ -64,8 +64,9 @@
     context.translate(size / 2, size / 2);
     context.scale(size / 490, size / 490);
     context.rotate(-.15 * (1 - openness));
-    context.lineWidth = .65;
-    for (let strand = 0; strand < strands; strand++) {
+    context.lineWidth = size < 420 ? .8 : .65;
+    const stride = size < 420 ? 2 : 1;
+    for (let strand = 0; strand < strands; strand += stride) {
       const u = strand / (strands - 1);
       // Muted ink shades give the line field depth without glow or shadows.
       context.strokeStyle = `rgba(${Math.round(48 + u * 52)}, ${Math.round(84 + u * 25)}, ${Math.round(65 + u * 17)}, ${.32 + .22 * Math.sin(u * Math.PI)})`;
