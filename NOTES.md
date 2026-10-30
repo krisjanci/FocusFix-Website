@@ -18,3 +18,12 @@
 - I updated the privacy page again to match the app's single Enable Input Monitoring button. It requests access and opens Settings, where I still have to turn the permission on. The page no longer tells people to look for the removed Finder button. This follow-up is still uncommitted, and the download stays disabled.
 
 - I saved this follow-up and its notes in separate commits, one per file. Nothing was pushed or published, and the download is still disabled.
+
+## Artistic design refresh — October 30, 2026
+
+- Preserved the small landing-page structure, FocusFix icon, “Make time for a break” message, disabled download, tutorial placeholder, written guide placeholder and privacy links.
+- Added a warm paper background, expressive serif headline, teal line art, an orbit illustration around the app icon and a restrained footer. System fonts and local assets keep the page independent of external services.
+- Added subtle icon/orbit motion, tutorial waves, guide detail animation and section reveals. Pause/Resume motion controls the animations. The operating system's reduced-motion preference disables animation and reveals content immediately. Content remains visible without JavaScript.
+- Browser checks passed at 375px and 1280px widths, with no horizontal overflow. Checked the tutorial and guide at phone width, the privacy-page link and layout, the disabled download and the motion toggle. A browser connection timeout interrupted one check; a fresh preview completed the desktop check.
+- JavaScript syntax, motion-control initialization/toggling and reduced-motion behavior, local link/asset existence and whitespace checks passed. No dependencies or build step were added.
+- Saved each implementation file in its own commit, followed by this separate notes commit. The website remains a local draft; nothing was pushed or published.
