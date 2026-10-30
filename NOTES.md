@@ -37,3 +37,13 @@
 - Browser verification covered 320px, 375px and 1280px widths with no horizontal overflow, the break and return states, keyboard stage activation and the disabled download. No browser warnings or errors were reported. Saved a full-page preview outside the repository.
 - Deterministic motion checks passed for a full cycle, held work time during breaks, resumed progress, manual stages, pause/resume, visibility suspension, Reduced Motion and IntersectionObserver fallback. JavaScript syntax, local asset/link and whitespace checks passed.
 - Committed every changed file separately for the main iteration and again for the visual/accessibility corrections. This notes update has its own commit. Nothing was pushed or published.
+
+## Symbolic art direction — October 30, 2026
+
+- Replaced the app-window illustration, timers, counters, stage controls and explanatory product-demo copy with a large generative thread sculpture. The three forms move from a dense, tense loop to two separated pause strokes and then an open, ordered circle. This is a visual metaphor for making space for a break, not a claim of measured fatigue reduction.
+- Kept one headline and one factual supporting line. Used a split editorial composition, muted ink colors, generous space and a restrained serif accent. The tutorial and guide remain compact placeholders; the privacy page and disabled download remain intact.
+- The pause motif also opens the divider beneath the artwork. A small index identifies Focus, Pause and Continue without adding promotional slogans.
+- Geometry is cached, rendering is capped near 30fps, and playback suspends offscreen or in hidden tabs. Pause/Play works without resetting the artwork. Reduced Motion renders the stable pause form. A static SVG illustration remains when scripting or canvas is unavailable. Small screens use fewer threads to reduce visual interference.
+- Browser checks covered 320px, 375px and 1280px widths. Fixed the observed desktop overflow and confirmed no horizontal overflow. Visually checked the sculpture, stable pause form, resources and footer. No browser warnings or errors were reported. Saved a full-page screenshot outside the repository.
+- Automated checks passed for finite drawing coordinates, all three forms and cycle return, pause/play, offscreen/hidden suspension, Reduced Motion, resize and missing-canvas fallback. Local links/assets, removal of app-demo elements, disabled download, JavaScript syntax and whitespace checks passed.
+- Every changed file was committed separately for the main iteration and every follow-up refinement. This notes update is a separate commit. Nothing was pushed or published.
