@@ -34,3 +34,13 @@ I can also open `dist/index.html` directly in a browser for a quick look. No pac
   study/consent plan, contact details and retention/deletion policy, not just a working bucket.
 - Follow the app repository's `RELEASE.md` checklist before adding a release asset.
   No app binary or website deployment was published during this readiness check.
+
+
+## Automatic-recording privacy draft update
+
+I updated the local privacy/support copy for explicit automatic opt-in, optional
+Start work, Unknown activity, pause/quit/login distinctions, survey-free ordinary
+use, coverage limits, bounded corrections and separately gated research. New
+research delivery stays disabled and group Work sync needs server compatibility.
+The download is still disabled. These files were not published; final hosting,
+reviewed policy URLs, signed-device and release checks remain outstanding.
