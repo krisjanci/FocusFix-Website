@@ -57,3 +57,14 @@
 - Browser checks passed at 320px, 375px and 1280px with no horizontal overflow. Confirmed 26px phone captions and 32px desktop captions, automatic phase changes, current-word opacity/position and pause state. No browser warnings or errors were reported. Saved a full-page preview outside the repository.
 - Automated checks passed for synchronized stage/progress updates, the full sculpture cycle, pause/play, visibility suspension, reduced-motion initialization, resize and canvas fallback. All local links/assets exist; syntax and whitespace checks passed.
 - Committed each changed file separately in the main iteration and each refinement, followed by this notes commit. Changes remain local and unpublished.
+
+
+## November 2, 2026 — automatic-recording privacy/support draft
+
+I updated only the local draft to match the app redesign: explicit automatic scope,
+optional work labels, unknown/non-work activity, separate pause/end/quit/login,
+ordinary use without surveys and missing coverage as unavailable. The notification
+Not working action is forward-only; history corrections preserve provenance.
+Research/new archives remain disabled, and new group Work totals stay local until
+correction-compatible sync is qualified. I did not publish the site or enable its
+download. Final public URLs, hosting disclosure and signed-device checks remain.
