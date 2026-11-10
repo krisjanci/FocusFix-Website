@@ -1,46 +1,15 @@
 # FocusFix Website
 
-## What it is
+This repository contains the website for FocusFix, an independently developed macOS app for recording computer activity, labeling work time, and taking breaks. The public app is separate from my N-of-1 study. It will not recruit study participants or collect data for that study.
 
-This is the website for my FocusFix macOS app. I want it to be simple: the logo, one slogan, a download button and instructions underneath. I don't need a big marketing page for one app.
+GitHub Pages publishes the site from `docs/` on the `main` branch. The app download remains disabled until a tested, signed, and notarized release is available. The privacy page still contains outdated study references and must be updated to describe the published app before it serves as the final privacy notice.
 
-For now it's just local and the download button is disabled. I removed the cat
-download from the button so it can't be confused with an installer. The asset is
-still in the repository. The recording/privacy page explains the local-only build
-I'm preparing, including Input Monitoring, private sandbox storage and GitHub Issues
-for general support. It still needs review against the final release and the hosting
-provider's privacy information before publishing.
+## Preview locally
 
-## How to run it
-
-From the `FocusFix-Website` folder, run:
+From this repository, run:
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 ```
 
-Then open http://127.0.0.1:8000 in my browser. Control-C in the terminal stops it.
-
-I can also open `docs/index.html` directly in a browser for a quick look. No packages need installing. This runs the website, not the macOS app.
-
-## What I want to add later
-
-- Enable the download with the actual app once it's tested, Developer ID-signed and notarized.
-- Put a tutorial video directly under the download button to show how to set up and use FocusFix.
-- Add a written manual below the video. I'm leaving space for it, but not writing it until the app is more complete.
-- Add the release version, supported Macs and the permission/privacy information people need before installing.
-- Publish the website when the download and instructions are ready. If I use it for the study, I'll get the participant-facing material reviewed first.
-- Keep the initial Release build local-only. Research enrollment needs my approved
-  study/consent plan, contact details and retention/deletion policy, not just a working bucket.
-- Follow the app repository's `RELEASE.md` checklist before adding a release asset.
-  No app binary or website deployment was published during this readiness check.
-
-
-## Automatic-recording privacy draft update
-
-I updated the local privacy/support copy for explicit automatic opt-in, optional
-Start work, Unknown activity, pause/quit/login distinctions, survey-free ordinary
-use, coverage limits, bounded corrections and separately gated research. New
-research delivery stays disabled and group Work sync needs server compatibility.
-The download is still disabled. These files were not published; final hosting,
-reviewed policy URLs, signed-device and release checks remain outstanding.
+Open <http://127.0.0.1:8000/> in a browser. No packages or build step are required.
