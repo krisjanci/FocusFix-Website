@@ -16,12 +16,12 @@ provider's privacy information before publishing.
 From the `FocusFix-Website` folder, run:
 
 ```sh
-python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
+python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 ```
 
 Then open http://127.0.0.1:8000 in my browser. Control-C in the terminal stops it.
 
-I can also open `dist/index.html` directly in a browser for a quick look. No packages need installing. This runs the website, not the macOS app.
+I can also open `docs/index.html` directly in a browser for a quick look. No packages need installing. This runs the website, not the macOS app.
 
 ## What I want to add later
 
