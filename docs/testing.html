@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Install the temporary FocusFix macOS test build.">
-  <title>Test FocusFix on another Mac</title>
+  <meta name="description" content="Download and install the Apple-notarized FocusFix app for macOS.">
+  <title>Install FocusFix on a Mac</title>
   <link rel="icon" href="assets/focusfix.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page privacy-page">
     <a href="index.html">← FocusFix</a>
-    <h1>Test FocusFix on another Mac</h1>
-    <p>This is a temporary build for testing while Apple Developer signing is being set up. It is ad hoc signed and <strong>not notarized by Apple</strong>. It is not a finished public release. Use it only on a Mac you control running macOS 14 or later.</p>
-    <p><a href="https://github.com/krisjanci/FocusFix-MacOS-App/releases/latest/download/FocusFix-macOS.zip">Download the latest test build (ZIP)</a> · <a href="https://github.com/krisjanci/FocusFix-MacOS-App/releases/latest">Release notes and checksums</a></p>
+    <h1>Install FocusFix on a Mac</h1>
+    <p>FocusFix is an independently developed macOS app. The website build is signed with a Developer ID certificate and notarized by Apple. It requires macOS 14 or later.</p>
+    <p><a href="https://github.com/krisjanci/FocusFix-MacOS-App/releases/latest/download/FocusFix-macOS.zip">Download FocusFix for macOS (ZIP)</a> · <a href="https://github.com/krisjanci/FocusFix-MacOS-App/releases/latest">Latest release and checksums</a></p>
     <h2>Install and open</h2>
     <ol>
       <li>Download and unzip <strong>FocusFix-macOS.zip</strong>, then move FocusFix.app into Applications.</li>
-      <li>Try to open the app. macOS may stop an app that Apple has not notarized. If you trust this exact download, use System Settings → Privacy &amp; Security → Open Anyway, following <a href="https://support.apple.com/102445">Apple’s instructions</a>. Do not turn off Gatekeeper for the whole Mac.</li>
-      <li>In FocusFix, choose whether to enable recording. Grant Input Monitoring only if you want to test activity capture. You can start with the Quick tour, which uses practice data.</li>
+      <li>Open FocusFix from Applications. macOS will identify the developer the first time you open it; review the prompt before continuing.</li>
+      <li>Use the Quick tour to learn the controls with practice data. Choose whether to enable recording. Grant Input Monitoring only if you want automatic activity recording.</li>
     </ol>
-    <h2>What this build can test</h2>
-    <p>Try manual and automatic recording, breaks, session review and export, the account flow, and private groups. Detailed recording uploads to the developer are disabled because that service is not deployed. This build cannot test that sharing workflow. Local recordings stay on your Mac unless you export them.</p>
+    <h2>What is available</h2>
+    <p>You can use manual and automatic recording, break reminders, session review and export, accounts, and private groups. Detailed recording uploads to the developer are currently disabled while that service is being prepared. Local recordings stay on your Mac unless you export them.</p>
     <p>For integrity, compare the downloaded ZIP with <a href="https://github.com/krisjanci/FocusFix-MacOS-App/releases/latest/download/SHA256SUMS.txt">SHA256SUMS.txt</a>. The same release includes the <a href="https://github.com/krisjanci/FocusFix-MacOS-App/releases/latest/download/FocusFix-source.zip">matching source</a> and GPL license.</p>
     <p>Read the <a href="privacy.html">privacy details</a> before recording. For a problem, <a href="https://github.com/krisjanci/FocusFix-MacOS-App/issues">open an issue</a> without uploading recordings, credentials, or personal information.</p>
   </main>
